@@ -1,57 +1,77 @@
 
 import streamlit as st
 import pandas as pd
-from teacher_entry import teacher_attendance_entry
+from datetime import datetime
 
 st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 
 @st.cache_data
 def load_data():
-    students = pd.read_csv("data/students.csv")
-    attendance = pd.read_csv("data/attendance.csv", parse_dates=['date'])
+    # Load student data from master Excel file
+    master_df = pd.read_excel("data/Jhon_T1_2024-2025_ClassList.xlsx")
+
+    # Standardize column names and select relevant ones
+    students = master_df.rename(columns={
+        "Student ID": "student_id",
+        "Name": "name",
+        "Class": "class",
+        "Gender": "gender",
+        "House": "house"
+    })[["student_id", "name", "class", "gender", "house"]]
+
+    students = students.dropna(subset=["student_id"])
+    students.columns = students.columns.str.strip()
+
+    # Load attendance data
+    attendance = pd.read_csv("data/attendance.csv", parse_dates=["date"])
+    attendance.columns = attendance.columns.str.strip()
+
+    # Load teacher data
     teachers = pd.read_csv("data/teachers.csv")
+    teachers.columns = teachers.columns.str.strip()
+
     return students, attendance, teachers
 
-def main():
-    students, attendance, teachers = load_data()
+students, attendance, teachers = load_data()
 
-    if students.empty:
-        st.error("Student list not found.")
-        return
+st.title("BSB Attendance System")
 
-    st.sidebar.title("Select View Mode")
-    mode = st.sidebar.radio("View Mode", ["Teacher", "Admin"])
+view = st.sidebar.selectbox("Choose your view:", ["Admin Panel", "Teacher Panel"])
 
-    if mode == "Teacher":
-        teacher_attendance_entry(students, attendance, teachers)
-    else:
-        st.title("📊 BSB Attendance Dashboard")
+if view == "Admin Panel":
+    st.header("Admin Dashboard")
 
-        total_students = len(students)
-        st.subheader("📚 Attendance Summary")
-        col1, col2, col3, col4 = st.columns(4)
-        col1.metric("Total Students", total_students)
+    # Show overall stats
+    total_students = len(students)
+    total_classes = students["class"].nunique()
+    total_attendance = len(attendance)
 
-        attendance_rate = (
-            len(attendance[attendance["status"] == "P"]) / len(attendance)
-            if not attendance.empty else 0
-        )
-        col2.metric("Attendance Rate", f"{attendance_rate:.1%}")
+    st.metric("Total Students", total_students)
+    st.metric("Classes", total_classes)
+    st.metric("Attendance Records", total_attendance)
 
-        girls = students[students["gender"] == "F"]
-        girls_pct = len(girls) / total_students if total_students > 0 else 0
-        col3.metric("Girls %", f"{girls_pct:.1%}")
+    # Optional breakdowns
+    st.subheader("House Distribution")
+    st.dataframe(students["house"].value_counts())
 
-        if "class" in attendance.columns:
-            absences_by_class = (
-                attendance[attendance["status"].isin(["E", "U"])]
-                .groupby("class").size().sort_values(ascending=False)
-            )
-            most_absent_class = absences_by_class.idxmax() if not absences_by_class.empty else "N/A"
-            col4.metric("Most Absent Class", most_absent_class)
-        else:
-            col4.metric("Most Absent Class", "N/A")
-            st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
+elif view == "Teacher Panel":
+    st.header("Teacher Dashboard")
 
-if __name__ == "__main__":
-    main()
+    teacher_names = teachers["teacher_name"].unique()
+    selected_teacher = st.selectbox("Select your name", teacher_names)
+
+    # Identify teacher's class
+    teacher_class = teachers[teachers["teacher_name"] == selected_teacher]["class"].values[0]
+
+    st.success(f"Welcome, {selected_teacher} - Class: {teacher_class}")
+
+    # Filter students and attendance
+    class_students = students[students["class"] == teacher_class]
+    class_attendance = attendance[attendance["class"] == teacher_class]
+
+    # Display
+    st.subheader("Students in Your Class")
+    st.dataframe(class_students)
+
+    st.subheader("Recent Attendance")
+    st.dataframe(class_attendance.tail(10))
