@@ -8,7 +8,7 @@ st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 @st.cache_data
 def load_data():
     students = pd.read_csv("data/students.csv")
-    attendance = pd.read_csv("data/attendance.csv", parse_dates=['date'])
+    attendance = pd.read_csv("data/merged.csv", parse_dates=['date'])
     teachers = pd.read_csv("data/teachers.csv")
     return students, attendance, teachers
 
@@ -26,23 +26,23 @@ if view_mode == "Teacher":
     st.markdown(f"👨‍🏫 Viewing class: **{assigned_class}**")
     teacher_attendance_entry()
     students = students[students["class"] == assigned_class]
-    if "class" in attendance.columns:
-        attendance = attendance[attendance["class"] == assigned_class]
+    if "class" in merged.columns:
+        attendance = merged[merged["class"] == assigned_class]
     else:
         st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
-        attendance = attendance.head(0)
+        attendance = merged.head(0)
 
 else:
     classes = sorted(students["class"].dropna().unique())
     selected_class = st.selectbox("Select your class", classes)
     students = students[students["class"] == selected_class]
-    if "class" in attendance.columns:
-        attendance = attendance[attendance["class"] == selected_class]
+    if "class" in merged.columns:
+        attendance = merged[merged["class"] == selected_class]
 
-terms = sorted(attendance["term"].dropna().unique()) if "term" in attendance.columns else []
+terms = sorted(merged["term"].dropna().unique()) if "term" in merged.columns else []
 selected_term = st.selectbox("Select Term", terms) if terms else "All"
-if "term" in attendance.columns:
-    attendance = attendance[attendance["term"] == selected_term]
+if "term" in merged.columns:
+    attendance = merged[merged["term"] == selected_term]
 
 merged = pd.merge(attendance, students, on="student_id", how="left")
 
@@ -51,8 +51,8 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     st.metric("Total Students", students.shape[0])
 with col2:
-    total_attendance = attendance.shape[0]
-    present_count = attendance[attendance["status"].isin(["P", "T"])].shape[0]
+    total_attendance = merged.shape[0]
+    present_count = merged[merged["status"].isin(["P", "T"])].shape[0]
     percent_present = (present_count / total_attendance * 100) if total_attendance else 0
     st.metric("Attendance Rate", "{:.1f}%".format(percent_present))
 with col3:
