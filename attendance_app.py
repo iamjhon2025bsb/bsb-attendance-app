@@ -8,7 +8,7 @@ st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 @st.cache_data
 def load_data():
     # Load student data from master Excel file
-    master_df = pd.read_excel("data/Jhon_T1_2024-2025_ClassList.xlsx")
+    master_df = pd.read_csv("data/students_master.csv")
 
     # Standardize column names and select relevant ones
     students = master_df.rename(columns={
