@@ -1,41 +1,75 @@
 
 import streamlit as st
 import pandas as pd
-import os
 
-st.set_page_config(page_title="📚 BSB Attendance", layout="wide")
+st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 
-st.title("📚 BSB Attendance Tracker")
+# Load data
+@st.cache_data
+def load_data():
+    students = pd.read_csv("data/students.csv")
+    attendance = pd.read_csv("data/attendance.csv", parse_dates=['date'])
+    return students, attendance
 
-# Display an indicator that app is loading
-st.markdown("🔄 Loading data files...")
+students, attendance = load_data()
 
-def safe_read_csv(path, label):
-    if not os.path.exists(path):
-        st.warning(f"⚠️ `{path}` not found for {label}.")
-        return pd.DataFrame()
-    try:
-        df = pd.read_csv(path)
-        if df.empty:
-            st.info(f"ℹ️ {label} is empty.")
-        return df
-    except Exception as e:
-        st.error(f"❌ Failed to read {label}: {e}")
-        return pd.DataFrame()
+# Title
+st.title("📊 BSB Attendance Dashboard")
 
-# Load files with visible feedback
-students_df = safe_read_csv("data/students.csv", "Students")
-attendance_df = safe_read_csv("data/attendance.csv", "Attendance")
+# Admin toggle
+view_mode = st.radio("Select View Mode", ["Teacher", "Admin"], horizontal=True)
 
-# Display data or placeholder info
-if not students_df.empty:
-    st.success(f"✅ Loaded {len(students_df)} students.")
-    st.dataframe(students_df)
-else:
-    st.warning("⚠️ No student data to display.")
+# Class filter
+classes = sorted(students["class"].dropna().unique())
+selected_class = None
+if view_mode == "Teacher":
+    selected_class = st.selectbox("Select your class", classes)
+    students = students[students["class"] == selected_class]
+    attendance = attendance[attendance["class"] == selected_class]
 
-if not attendance_df.empty:
-    st.success(f"✅ Loaded {len(attendance_df)} attendance records.")
-    st.dataframe(attendance_df)
-else:
-    st.info("ℹ️ No attendance records available.")
+# Term filter
+terms = sorted(attendance["term"].dropna().unique())
+selected_term = st.selectbox("Select Term", terms)
+attendance = attendance[attendance["term"] == selected_term]
+
+# Merge data
+merged = pd.merge(attendance, students, on="student_id", how="left")
+
+# Summary Cards
+st.markdown("### 🔍 Attendance Summary")
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.metric("Total Students", students.shape[0])
+with col2:
+    total_attendance = attendance.shape[0]
+    present_count = attendance[attendance["status"].isin(["P", "T"])].shape[0]
+    percent_present = (present_count / total_attendance * 100) if total_attendance else 0
+    st.metric("Attendance Rate", "{:.1f}%".format(percent_present))
+with col3:
+    gender_ratio = students["gender"].value_counts(normalize=True) * 100
+    st.metric("Girls %", "{:.1f}%".format(gender_ratio.get("F", 0)))
+with col4:
+    absences_by_class = merged[merged["status"].isin(["E", "U"])].groupby("class").size()
+    most_absent_class = absences_by_class.idxmax() if not absences_by_class.empty else "N/A"
+    st.metric("Most Absent Class", most_absent_class)
+
+# Top absentees
+st.markdown("### 🚨 Top Absentees")
+absent_count = merged[merged["status"].isin(["E", "U"])].groupby(["student_id", "name", "class"]).size().reset_index(name="absences")
+top_absentees = absent_count.sort_values(by="absences", ascending=False).head(5)
+st.dataframe(top_absentees)
+
+# House overview
+st.markdown("### 🏠 House Overview")
+house_stats = merged[merged["status"].isin(["P", "T", "E", "U"])]
+house_summary = house_stats.groupby("house")["status"].value_counts().unstack().fillna(0)
+house_summary["Total Records"] = house_summary.sum(axis=1)
+house_summary["% Present"] = (house_summary[["P", "T"]].sum(axis=1) / house_summary["Total Records"]) * 100
+st.dataframe(house_summary[["Total Records", "% Present"]].sort_values(by="% Present", ascending=False))
+
+# Raw tables
+st.markdown("### 🧾 Student List")
+st.dataframe(students)
+
+st.markdown("### 🕓 Attendance Records")
+st.dataframe(attendance)
