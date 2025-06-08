@@ -1,7 +1,7 @@
 
-from teacher_entry import teacher_attendance_entry
 import streamlit as st
 import pandas as pd
+from teacher_entry import teacher_attendance_entry
 
 st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 
@@ -12,38 +12,46 @@ def load_data():
     teachers = pd.read_csv("data/teachers.csv")
     return students, attendance, teachers
 
-def preprocess_data(students, attendance):
-    # Merge student info into attendance
-    merged = pd.merge(attendance, students, on="student_id", how="left", suffixes=("_att", "_stu"))
-
-    # Fill class from student data if attendance class is unknown
-    if "class_att" in merged.columns and "class_stu" in merged.columns:
-        merged["class"] = merged["class_att"].where(merged["class_att"] != "Unknown", merged["class_stu"])
-    elif "class" not in merged.columns:
-        st.warning("Merged data missing 'class' info. Analysis may be limited.")
-
-    return merged
-
 def main():
     students, attendance, teachers = load_data()
-    merged = preprocess_data(students, attendance)
 
-    view_mode = st.radio("Select View Mode", ["Teacher", "Admin"], horizontal=True)
+    if students.empty:
+        st.error("Student list not found.")
+        return
 
-    if view_mode == "Teacher":
+    st.sidebar.title("Select View Mode")
+    mode = st.sidebar.radio("View Mode", ["Teacher", "Admin"])
+
+    if mode == "Teacher":
         teacher_attendance_entry(students, attendance, teachers)
     else:
-        st.header("📊 Attendance Summary")
-        st.metric("Total Students", len(students))
-        st.metric("Attendance Rate", f"{100 * merged['status'].isin(['P']).mean():.1f}%" if not merged.empty else "0.0%")
-        st.metric("Girls %", f"{100 * (students['gender'] == 'F').mean():.1f}%" if not students.empty else "0.0%")
+        st.title("📊 BSB Attendance Dashboard")
 
-        try:
-            absences_by_class = merged[merged["status"].isin(["E", "U"])].groupby("class").size()
-            st.subheader("🚫 Top Absentees by Class")
-            st.bar_chart(absences_by_class)
-        except KeyError as e:
-            st.error(f"Missing expected column during analysis: {e}")
+        total_students = len(students)
+        st.subheader("📚 Attendance Summary")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Total Students", total_students)
+
+        attendance_rate = (
+            len(attendance[attendance["status"] == "P"]) / len(attendance)
+            if not attendance.empty else 0
+        )
+        col2.metric("Attendance Rate", f"{attendance_rate:.1%}")
+
+        girls = students[students["gender"] == "F"]
+        girls_pct = len(girls) / total_students if total_students > 0 else 0
+        col3.metric("Girls %", f"{girls_pct:.1%}")
+
+        if "class" in attendance.columns:
+            absences_by_class = (
+                attendance[attendance["status"].isin(["E", "U"])]
+                .groupby("class").size().sort_values(ascending=False)
+            )
+            most_absent_class = absences_by_class.idxmax() if not absences_by_class.empty else "N/A"
+            col4.metric("Most Absent Class", most_absent_class)
+        else:
+            col4.metric("Most Absent Class", "N/A")
+            st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
 
 if __name__ == "__main__":
     main()
