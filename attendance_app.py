@@ -21,11 +21,16 @@ selected_class = None
 if view_mode == "Teacher":
     selected_class = st.selectbox("Select your class", classes)
     students = students[students["class"] == selected_class]
-    attendance = attendance[attendance["class"] == selected_class]
+    if "class" in attendance.columns:
+        attendance = attendance[attendance["class"] == selected_class]
+    else:
+        st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
+        attendance = attendance.head(0)
 
-terms = sorted(attendance["term"].dropna().unique())
-selected_term = st.selectbox("Select Term", terms)
-attendance = attendance[attendance["term"] == selected_term]
+terms = sorted(attendance["term"].dropna().unique()) if "term" in attendance.columns else []
+selected_term = st.selectbox("Select Term", terms) if terms else "All"
+if "term" in attendance.columns:
+    attendance = attendance[attendance["term"] == selected_term]
 
 merged = pd.merge(attendance, students, on="student_id", how="left")
 
