@@ -1,6 +1,6 @@
-student_id,date,status,term,class
-BSB24057,2025-06-08,P,Term 1,Unknown
-BSB24081,2025-06-08,T,Term 1,Unknown
-BSB24055,2025-06-08,E,Term 1,Unknown
-BSB2362,2025-06-08,U,Term 1,Unknown
-BSB24065,2025-06-08,P,Term 1,Unknown
+student_id,date,status,term,class_x,class_y
+BSB24057,2025-06-08,P,Term 1,Unknown,N
+BSB24081,2025-06-08,T,Term 1,Unknown,N
+BSB24055,2025-06-08,E,Term 1,Unknown,N
+BSB2362,2025-06-08,U,Term 1,Unknown,N
+BSB24065,2025-06-08,P,Term 1,Unknown,N
