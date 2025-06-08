@@ -1,227 +1,367 @@
-student_id,name,gender,class,contact,house
-BSB24057,ADELAIDE SUKHOTHAI COURTOIS,F,N,,
-BSB24081,Brayden Patibut Arnold,M,N,,
-BSB24055,Damian Kai van der Maas,M,N,,
-BSB2362,Isabella Alessandra Talosig Wilcox,F,N,,
-BSB24065,Katherine Eleonore Moretti,F,N,,
-BSB24079,MARCEL MADEC,M,N,,
-BSB24027,Ran Yamada,F,N,,
-BSB23027,Rei Miyazaki,F,N,,
-BSB24078,Sacha Singh Tatla,M,N,,
-BSB2378,Riccardo Lunardini,M,N,,
-BSB2329,Supakrit Jarupasin,M,N,,
-BSB2365,Takahisa Komatsuzaki,M,N,,
-BSB2376,Oliver Willem de Nie,M,N,,
-BSB2383,An Phuoc Bao Ho,M,N,,
-BSB2387,Sachika Sugioka,M,N,,
-BSB2398,Kaden Thanin Rodriguez,M,N,,
-BSB2406,Tyme Wattanawongchai,M,N,,
-BSB2408,Aoto Kameshima,M,N,,
-BSB2410,Ben  Lavi,M,N,,
-BSB2416,Viet Capdevila Phan,M,N,,
-BSB2407,Izumi  Tomita,F,N,,
-BSB2415,Ekisa  Hans Joachim Hossfeld,M,N,,
-BSB2417,Nana Hirata,F,N,,
-BSB2419,Ohanna Judith Piyara Karunaratna,F,EYTBC,,
-BSB2393,Ayaan Danesh Jayasuriya,M,EYTBC,,
-BSB2403,Milo Curto,M,EYTBC,,
-BSB2405,Marryam Tayparsit,F,EYTBC,,
-BSB2406,Tyme Wattanawongchai,M,EYTBC,,
-BSB24002,Dan Kudo,M ,RC1,,
-BSB23052,Lilly Fabri,F,RC1,,
-BSB24032,Luka Kumagai,M,RC1,,
-BSB23073,Mikhail Abramov,M,RC1,,
-BSB23095,Panukorn  Amornsiripanitch,M,RC1,,
-BSB23096,Remy Atlas Cookson,M,RC1,,
-BSB23037,Sophie Willow Crawford,F,RC1,,
-BSB2364,Ryutaro Sasada,M,RC1,,
-BSB24022,Sirimongkol  Kulalert,M,RC1,,
-BSB24083,Yuichiro Ihara,M,RC1,,
-BSB24072,Haruki Jorge Kodama,M,RC1,,
-BSB23075,Connor Chen,M,RC2,,
-BSB24066,Elise Och,F,RC2,,
-BSB23084,Haanvi Arunkumar Gowda,F,RC2,,
-BSB23103,Inaaya Vatsyayana,F,RC2,,
-BSB24061,Mariyam Lilian Raslaan,F,RC2,,
-BSB23078,Muhammadfareh Ikromi,M,RC2,,
-BSB23117,Parrun Julayanont,M,RC2,,
-BSB24048,Raku Endo,M,RC2,,
-BSB24010,Suzu Sakai,F,RC2,,
-BSB24035,Yahiro Yamauchi,M,RC2,,
-BSB2386,Ray Matsumoto ,M,RC2,,
-BSB2392,TaeHyun Kim,M,RC2,,
-BSB24070,Alice Tsurisawa,F,Y1A,,
-BSB23116,Felix Xabsher Bourbonnais Hyde,M,Y1A,,
-BSB22046,Hoang Lam Ngo,M,Y1A,,
-BSB23019,Kaylee  Keyrouz ,F,Y1A,,
-BSB23048,Kirill Vladimirovich Popovidchenko,M,Y1A,,
-BSB24076,Liam  K C,M,Y1A,,
-BSB22026,Max Floris de Nie,M,Y1A,,
-BSB23108,Rei Shigenari,F,Y1A,,
-BSB22068,Shaurya Archis Parab,M,Y1A,,
-BSB23111,Shiyuna Yamauchi,F,Y1A,,
-BSB22016,Siripailin Chintawongvanich,F,Y1A,,
-BSB22025,Sivanh Kumar Almeida,M,Y1A,,
-BSB2366,Kenyu Yamada (Gho),M,Y1A,,
-BSB2273,Senichi Miller,M,Y1A,,
-BSB2381,Rashad Shaikh,M,Y1A,,
-BSB2400,Kai Nakazawa ,M,Y1A,,
-BSB2411,Bloom  Lavi,M,Y1A,,
-BSB23117,Parrun Julayanont,M,Y1A,,
-BSB2391,Youseom Son,M,Y1TBC,,
-BSB2399,Sanya Bri Smith,F,Y1TBC,,
-BSB21054,Atiksh Ranjan,M,Y1B,,
-BSB24053,Dhruv Hebbale,M,Y1B,,
-BSB23104,Kai Miyazaki,M,Y1B,,
-BSB22040,Laetitia Karakia Suharsono,F,Y1B,,
-BSB24069,Luca Anthony Severs Millard,M,Y1B,,
-BSB22059,Meisa Watanabe,F,Y1B,,
-BSB24071,Nagisa William Kodama,M,Y1B,,
-BSB24054,Rainn Jeremy Talosig Wilcox,M,Y1B,,
-BSB23069,Shashvat Pandey,M,Y1B,,
-BSB24051,Taigen Kawase,M,Y1B,,
-BSB23013,Theo Alexandre Moretti,M,Y1B,,
-BSB24024,Yoshika Yamamoto,F,Y1B,,
-BSB22057,Zhi Xuan He,M,Y1B,,
-BSB2367,Elias  Jmaiel Volpe,M,Y1B,,
-BSB21060,Thanitha Srilaveevilas,F,Y1B,,
-BSB2396,India Tremayne Singh,F,Y1B,,
-BSB2409,Yua Kameshima,M,Y1B,,
-BSB2394,Robert Kharitonov,M,Y1TBC,,
-BSB21053,Cassandra Victoria Palma Dilanco,F,Y2A,,
-BSB24001,Emma Kudo,F,Y2A,,
-BSB21057,Fumika Ishii,F,Y2A,,
-BSB24028,Karl  Sutthirak,M,Y2A,,
-BSB24029,Leonardo Lunardini,M,Y2A,,
-BSB24013,Lina Ellwanger,F,Y2A,,
-BSB24005,Naomi  Linh Van Kerrebroeck ,F,Y2A,,
-BSB23038,Reuben Alexander Crawford,M,Y2A,,
-BSB22005,Saveinya Nelumdee Adikari Mudiyanselage,F,Y2A,,
-BSB24009,Uta Sakai,F,Y2A,,
-BSB22004,Vanya Hegde,F,Y2A,,
-BSB20049,Vian Singh Pundir,M,Y2A,,
-BSB24004,Yeseop Son,M,Y2A,,
-BSB2388,Ritsuki Yagi,M,Y2A,,
-BSB2412,Soma Suzuki,M,Y2TBC,,
-BSB2404,Arya Tayparsit,M,Y2TBC,,
-BSB2402,Elio Curto,M,Y2TBC,,
-BSB2401,Stanisław Stefan Hejnowicz,M,Y2TBC,,
-BSB2389,Daan Jung,F,Y2TBC,,
-BSB2390,Basile Aboutika,M,Y2TBC,,
-BSB2418,TingLi Chen,F,Y2TBC,,
-BSB22013,Alynrada  Saeng-Xuto,F,Y2B,,
-BSB23076,Artemii Shmelev,M,Y2B,,
-BSB22066,Esme Hasan,F,Y2B,,
-BSB21058,Ikuka Ishii,F,Y2B,,
-BSB21052,Manami Thongnum,F,Y2B,,
-BSB24047,Naotaro Endo,M,Y2B,,
-BSB23101,Nathaniel  Layno  Rodriguez ,M,Y2B,,
-BSB21037,Raphani Dawar,F,Y2B,,
-BSB24031,Riri Kumagai,F,Y2B,,
-BSB24026,So Yamada,F,Y2B,,
-BSB23057,Upe Kvedaraite,F,Y2B,,
-BSB2373,Kris Chaiareekij,M,Y2B,,
-BSB2377,Siyi Bu,M,Y2B,,
-BSB2385,Sae Muramatsu,M,Y2B,,
-BSB2414,Ajaa  Naima Christina  Hossfeld,F,Y2TBC,,
-BSB2413,Amai Kweli Lisa Hossfeld,F,Y2TBC,,
-BSB20003,Elan Jai Mangal,M,Y3A,,
-BSB20030,Faaiz Ashraf Mullaji,M,Y3A,,
-BSB22050,Janosch Fabri,M,Y3A,,
-BSB23023,Nakin Thipatima,M,Y3A,,
-BSB23024,Nira Thipatima,F,Y3A,,
-BSB23016,Pippa  Potisoontorn ,F,Y3A,,
-BSB24033,Rikka Yamauchi,F,Y3A,,
-BSB24041,Rino Tomizawa,F,Y3A,,
-BSB24003,Samarth Sai Nama,M,Y3A,,
-BSB24025,Sana Yamaguchi,F,Y3A,,
-BSB22060,Thoon Su Sandha Mon,F,Y3A,,
-BSB23106,Yusei Kawase,M,Y3A,,
-BSB22022,Zoey Surasarang Melson,F,Y3A,,
-BSB24060,Arjun  Swapnil Patil,M,Y3B,,
-BSB23026,Erina Suzuki,F,Y3B,,
-BSB24056,Joshua  Ittipon  Atherton,M,Y3B,,
-BSB22065,Katsunari Sakurai,M,Y3B,,
-BSB24067,Kenzo Och,M,Y3B,,
-BSB23099,Mika Sakai,F,Y3B,,
-BSB23109,Shio Yamauchi,M,Y3B,,
-BSB23112,Sui Yamamoto,F,Y3B,,
-BSB23014,Theodore  Geoffery Hatta Parsons,M,Y3B,,
-BSB24020,Tom Doodai,F,Y3B,,
-BSB2199,Klara Jasmin Atharizq ,F,Y3B,,
-BSB24058,Ahmed  LAIDHAN   Raslaan Shiyam,M,Y3C,,
-BSB20047,Booker Lennox McClellan,M,Y3C,,
-BSB22017,Elena Patrick,F,Y3C,,
-BSB24030,Gaurish Sharma,M,Y3C,,
-BSB01181,Mia Nakazawa,F,Y3C,,
-BSB24062,Narlan Ruadrew,F,Y3C,,
-BSB23105,Rui Miyazaki,M,Y3C,,
-BSB22061,Ryoma Kubo,M,Y3C,,
-BSB21042,Sana Matsuzaka,F,Y3C,,
-BSB24043,Viraaj Prabhakar,M,Y3C,,
-BSB22056,Zhi Heng He,M,Y3C,,
-BSB2382,Khamkhouanh Vongphachanh,F,Y3C,,
-BSB20002,Avi Krish Mangal,M,Y4A,,
-BSB21046,Chise Kitami,F,Y4A,,
-BSB21026,Guy Horatio Shao-Wei Leaver,M,Y4A,,
-BSB24034,Ibragim Kaiyrbek,M,Y4A,,
-BSB24075,Kalvinphat Phaosawasdi,M,Y4A,,
-BSB20012,Kanitha Arisen Arumugam,F,Y4A,,
-BSB23102,Lea  Davis Staley ,F,Y4A,,
-BSB21004,Lucas Hofstetter,M,Y4A,,
-BSB23053,Maison  James Richard Cruz Marchant,M,Y4A,,
-BSB23020,Marquess Naveesathien,M,Y4A,,
-BSB24074,Minami Hara,F,Y4A,,
-BSB23017,Rin Hamada,F,Y4A,,
-BSB22010,Samar  Ali Shaikh,M,Y4A,,
-BSB23107,Sofi Mosina,F,Y4A,,
-BSB23091,Suzuna Ozawa,F,Y4A,,
-BSB23070,Veer Singh Pundir,M,Y4A,,
-BSB2370,Sainaara Argunova,F,Y4A,,
-BSB23050,Aaryahi Shankar,F,Y4B,,
-BSB23098,Amane Enya,M,Y4B,,
-BSB23046,Angelica Venturini,F,Y4B,,
-BSB22006,Avaneesh Prasad,M,Y4B,,
-BSB23056,Gregory Moreschi,M,Y4B,,
-BSB23001,Iana Danilova,F,Y4B,,
-BSB01256,Kazi Rusho Abdullah Rahman,M,Y4B,,
-BSB24008,Leon Shishido,M,Y4B,,
-BSB21001,Nanao Saito,F,Y4B,,
-BSB20029,Rey Rafael Ben Abu,M,Y4B,,
-BSB21033,Shakrit Smith,M,Y4B,,
-BSB23018,Taiki Iwasaki,M,Y4B,,
-BSB21056,Tomoharu Ishii,M,Y4B,,
-BSB23035,Xicheng Wu,M,Y4B,,
-BSB2397,TaeWha Kim,M,Y4B,,
-BSB01179,Ajai Dawar,M,Y5,,
-BSB01201,Azah Dawar,F,Y5,,
-BSB21014,Dominic Chalieowai McClellan,M,Y5,,
-BSB23118,Erina Takahashi ,F,Y5,,
-BSB21038,Inayah Monjer,F,Y5,,
-BSB22049,Mio Fabri,M,Y5,,
-BSB24073,REHAN AS  SAMI,M,Y5,,
-BSB24036,Ritsuko Adachi,F,Y5,,
-BSB20028,Royal Shilat Ben Abu,F,Y5,,
-BSB23066,Ruby Linlat,F,Y5,,
-BSB23058,Saule Kvedaraite,F,Y5,,
-BSB21059,Shanvi Acharya,F,Y5,,
-BSB23072,Veronika Abramov,F,Y5,,
-BSB22003,Viaan Barua,M,Y5,,
-BSB21041,Yuki Matsuzaka,M,Y5,,
-BSB23068,Ahasha Pandey,F,Y6,,
-BSB21025,Angelica May Xiao-Wei Leaver,F,Y6,,
-BSB23047,Daniil Vladimirovich Popovidchenko,M,Y6,,
-BSB21047,Dinuli Pehansa Dewmanthie Adikari Mudiyanselage,F,Y6,,
-BSB24042,Emmy Safira Duangthawee,F,Y6,,
-BSB01166,Fora Dora,M,Y6,,
-BSB23079,Iso Ikromi,M,Y6,,
-BSB21003,Jacob Hofstetter,M,Y6,,
-BSB24040,Mana Tomizawa,F,Y6,,
-BSB24019,May Doodai,F,Y6,,
-BSB24006,Mia Claire Wilson,F,Y6,,
-BSB01178,Paarth Madan,M,Y6,,
-BSB22027,Shehzad Ihsan Khan,M,Y6,,
-BSB01248,Zie Ning Zita Sim,F,Y6,,
-BSB23039,Zoe Pascual Arce,F,Y6,,
-BSB20040,Kenzo Taqi Atharizq,M,Y6,,
-BSB23025,Shoma Takahashi ,M,Y6,,
+class,name,dob,gender,nationality,student_code,house
+N,ADELAIDE SUKHOTHAI COURTOIS,2023-02-11 00:00:00,F,French,BSB24057,
+N,Brayden Patibut Arnold,2022-03-04 00:00:00,M,Thai,BSB24081,
+N,Damian Kai van der Maas,2022-07-07 00:00:00,M,Dutch,BSB24055,
+N,Isabella Alessandra Talosig Wilcox,18/12/2022,F,British,BSB2362,
+N,Katherine Eleonore Moretti,27/7/2022,F,Finnish,BSB24065,
+N,MARCEL MADEC,29/03/2022,M,Finnish,BSB24079,
+N,Ran Yamada,2022-04-01 00:00:00,F,Japanese,BSB24027,
+N,Rei Miyazaki,2022-11-04 00:00:00,F,C,BSB23027,
+N,Sacha Singh Tatla,2022-10-01 00:00:00,M,English,BSB24078,
+N,Riccardo Lunardini,2023-11-08 00:00:00,M,Italian,BSB2378,
+N,Supakrit Jarupasin,2023-10-06 00:00:00,M,Thai,BSB2329,
+N,Takahisa Komatsuzaki,13/10/2022,M,Japanese,BSB2365,
+N,Oliver Willem de Nie,16/11/2020,M,Dutch,BSB2376,
+N,An Phuoc Bao Ho,31/05/2023,M,Vietnamese,BSB2383,
+N,Sachika Sugioka,2021-03-11 00:00:00,M,Japanese,BSB2387,
+N,Kaden Thanin Rodriguez,22/11/2022,M,Thai,BSB2398,
+N,Tyme Wattanawongchai,29/05/2022,M,Thai,BSB2406,
+N,Aoto Kameshima,2023-07-01 00:00:00,M,Japanese,BSB2408,
+N,Ben  Lavi,21/06/2021,M,Israeli,BSB2410,
+N,Viet Capdevila Phan,19/09/2023,M,Vietnamese,BSB2416,
+N,Izumi  Tomita,2022-04-10 00:00:00,F,Japanese,BSB2407,
+N,Ekisa  Hans Joachim Hossfeld,16/12/2019,M,German,BSB2415,
+N,Nana Hirata,25/8/2023,F,Japanese,BSB2417,
+,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EY1,,,,,,
+EYTBC,Ohanna Judith Piyara Karunaratna,22/07/2022,F,Sri Lankan,BSB2419,
+EYTBC,Ayaan Danesh Jayasuriya,15/02/2022,M,Sri Lankan,BSB2393,
+EYTBC,Milo Curto,23/11/2021,M,German,BSB2403,
+EYTBC,Marryam Tayparsit,2021-09-11 00:00:00,F,Thai,BSB2405,
+EYTBC,Tyme Wattanawongchai,29/05/2022,M,Thai,BSB2406,
+,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+EY2,,,,,,
+,,,,,,
+RC1,Dan Kudo,29/03/2021,M ,Japanese,BSB24002,
+RC1,Lilly Fabri,2021-05-10 00:00:00,F,German,BSB23052,
+RC1,Luka Kumagai,14/05/2021,M,Japanese,BSB24032,
+RC1,Mikhail Abramov,23/6/2021,M,Russian,BSB23073,
+RC1,Panukorn  Amornsiripanitch,27/09/2021,M,Thai,BSB23095,
+RC1,Remy Atlas Cookson,13/04/2021,M,British,BSB23096,
+RC1,Sophie Willow Crawford,14/03/2021,F,British,BSB23037,
+RC1,Ryutaro Sasada,18/09/2021,M,Japanese,BSB2364,
+RC1,Sirimongkol  Kulalert,13/01/2022,M,Thai,BSB24022,
+RC1,Yuichiro Ihara,17/10/2021,M,Japanese,BSB24083,
+RC1,Haruki Jorge Kodama,2021-11-11 00:00:00,M,Japanese,BSB24072,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+RC1,,,,,,
+,,,,,,
+RC2,Connor Chen,2021-01-08 00:00:00,M,Thai,BSB23075,
+RC2,Elise Och,2021-12-06 00:00:00,F,Swiss,BSB24066,
+RC2,Haanvi Arunkumar Gowda,24/03/2021,F,Indian,BSB23084,
+RC2,Inaaya Vatsyayana,2021-05-06 00:00:00,F,Indian,BSB23103,
+RC2,Mariyam Lilian Raslaan,2021-07-02 00:00:00,F,Maldivian,BSB24061,
+RC2,Muhammadfareh Ikromi,2021-10-03 00:00:00,M,Russian,BSB23078,
+RC2,Parrun Julayanont,24/11/2020,M,American,BSB23117,
+RC2,Raku Endo,2021-09-03 00:00:00,M,Japanese,BSB24048,
+RC2,Suzu Sakai,22/02/2021,F,Japanese,BSB24010,
+RC2,Yahiro Yamauchi,17/08/2021,M,Japanese,BSB24035,
+RC2,Ray Matsumoto ,14/10/2020,M,Japanese,BSB2386,
+RC2,TaeHyun Kim,24/10/2022,M,Korean,BSB2392,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+RC2,,,,,,
+,,,,,,
+Y1A,Alice Tsurisawa,2020-07-03 00:00:00,F,Japanese,BSB24070,Ayuthaya
+Y1A,Felix Xabsher Bourbonnais Hyde,2020-02-05 00:00:00,M,French,BSB23116,Ayuthaya
+Y1A,Hoang Lam Ngo,2019-09-12 00:00:00,M,Thai,BSB22046,Sukhothai
+Y1A,Kaylee  Keyrouz ,18/05/2020,F,Thai,BSB23019,Sukhothai
+Y1A,Kirill Vladimirovich Popovidchenko,16/09/2019,M,Russian,BSB23048,Ayuthaya
+Y1A,Liam  K C,2020-03-04 00:00:00,M,British,BSB24076,Sukhothai
+Y1A,Max Floris de Nie,16/11/2020,M,Dutch,BSB22026,Ayuthaya
+Y1A,Rei Shigenari,24/02/2020,F,Rei,BSB23108,Ayuthaya
+Y1A,Shaurya Archis Parab,16/11/2019,M,Indian,BSB22068,Sukhothai
+Y1A,Shiyuna Yamauchi,15/09/2020,F,Japanese,BSB23111,Sukhothai
+Y1A,Siripailin Chintawongvanich,2020-12-07 00:00:00,F,Thai,BSB22016,Ayuthaya
+Y1A,Sivanh Kumar Almeida,26/8/2020,M,Portuguese,BSB22025,Ayuthaya
+Y1A,Kenyu Yamada (Gho),24/10/2020,M,Japanese,BSB2366,Sukhothai
+Y1A,Senichi Miller,2020-01-07 00:00:00,M,English,BSB2273,Ayuthaya
+Y1A,Rashad Shaikh,13/07/2020,M,Indian,BSB2381,Sukhothai
+Y1A,Kai Nakazawa ,2020-02-07 00:00:00,M,Japanese,BSB2400,Ayuthaya
+Y1A,Bloom  Lavi,21/07/2020,M,Israeli,BSB2411,Sukhothai
+Y1A,Parrun Julayanont,24/11/2020,M,American,BSB23117,Ayuthaya
+Y1TBC,Youseom Son,21/1/2020,M,South Korean,BSB2391,Sukhothai
+Y1TBC,Sanya Bri Smith,28/02/2020,F,Thai,BSB2399,Sukhothai
+,,,,,,
+Y1B,Atiksh Ranjan,13/12/2019,M,Indian,BSB21054,Ayuthaya
+Y1B,Dhruv Hebbale,2019-12-07 00:00:00,M,Indian,BSB24053,Sukhothai
+Y1B,Kai Miyazaki,2020-07-04 00:00:00,M,Japanese,BSB23104,Ayuthaya
+Y1B,Laetitia Karakia Suharsono,13/11/2019,F,Indonesia,BSB22040,Ayuthaya
+Y1B,Luca Anthony Severs Millard,15/08/2020,M,Thai,BSB24069,Sukhothai
+Y1B,Meisa Watanabe,2020-04-04 00:00:00,F,Japanese,BSB22059,
+Y1B,Nagisa William Kodama,30/01/2020,M,Japanese,BSB24071,
+Y1B,Rainn Jeremy Talosig Wilcox,2019-02-10 00:00:00,M,British,BSB24054,Ayuthaya
+Y1B,Shashvat Pandey,2020-09-01 00:00:00,M,Indian,BSB23069,Sukhothai
+Y1B,Taigen Kawase,2019-07-09 00:00:00,M,Japanese,BSB24051,Ayuthaya
+Y1B,Theo Alexandre Moretti,29/4/2020,M,Finnish,BSB23013,Sukhothai
+Y1B,Yoshika Yamamoto,2020-02-01 00:00:00,F,Japanese,BSB24024,Sukhothai
+Y1B,Zhi Xuan He,28/2/2020,M,Chinese,BSB22057,Ayuthaya
+Y1B,Elias  Jmaiel Volpe,24/11/2019,M,English,BSB2367,Sukhothai
+Y1B,Thanitha Srilaveevilas,2020-10-04 00:00:00,F,Thai,BSB21060,Ayuthaya
+Y1B,India Tremayne Singh,2020-11-06 00:00:00,F,British,BSB2396,Sukhothai
+Y1B,Yua Kameshima,26/10/2019,M,Japanese,BSB2409,Sukhothai
+Y1TBC,Robert Kharitonov,2020-12-05 00:00:00,M,Russian,BSB2394,Sukhothai
+Y1TBC,,,,,,
+,,,,,,
+Y2A,Cassandra Victoria Palma Dilanco,2019-09-07 00:00:00,F,Filipino,BSB21053,Ayuthaya
+Y2A,Emma Kudo,2019-08-04 00:00:00,F,Japanese,BSB24001,Sukhothai
+Y2A,Fumika Ishii,17/7/2019,F,Japanese,BSB21057,Ayuthaya
+Y2A,Karl  Sutthirak,2018-01-12 00:00:00,M,Thai,BSB24028,Ayuthaya
+Y2A,Leonardo Lunardini,15/05/2019,M,Italian,BSB24029,Sukhothai
+Y2A,Lina Ellwanger,25/02/2019,F,Dutch,BSB24013,Ayuthaya
+Y2A,Naomi  Linh Van Kerrebroeck ,28/12/2018,F,Belgian,BSB24005,Sukhothai
+Y2A,Reuben Alexander Crawford,30/01/2019,M,British,BSB23038,Ayuthaya
+Y2A,Saveinya Nelumdee Adikari Mudiyanselage,19/4/2019,F,Sri Lankan,BSB22005,Sukhothai
+Y2A,Uta Sakai,25/10/2018,F,Japanese,BSB24009,Sukhothai
+Y2A,Vanya Hegde,2019-08-03 00:00:00,F,Indian,BSB22004,Sukhothai
+Y2A,Vian Singh Pundir,18/7/2019,M,Indian,BSB20049,Sukhothai
+Y2A,Yeseop Son,2018-05-11 00:00:00,M,Chinese,BSB24004,Ayuthaya
+Y2A,Ritsuki Yagi,19/02/2019,M,Japanese,BSB2388,Sukhothai
+Y2TBC,Soma Suzuki,17/08/2018,M,Japanese,BSB2412,Ayuthaya
+Y2TBC,Arya Tayparsit,13/06/2019,M,Thai,BSB2404,Sukhothai
+Y2TBC,Elio Curto,30/07/2019,M,German,BSB2402,Ayuthaya
+Y2TBC,Stanisław Stefan Hejnowicz,18/10/2019,M,Polish,BSB2401,Sukhothai
+Y2TBC,Daan Jung,19/3/2019,F,South Korean,BSB2389,Sukhothai
+Y2TBC,Basile Aboutika,2019-07-01 00:00:00,M,French,BSB2390,Ayuthaya
+Y2TBC,TingLi Chen,2019-03-09 00:00:00,F,Chinese,BSB2418,Ayuthaya
+,,,,,,
+Y2B,Alynrada  Saeng-Xuto,2018-09-11 00:00:00,F,Thai,BSB22013,Ayuthaya
+Y2B,Artemii Shmelev,24/01/2019,M,Russian,BSB23076,Ayuthaya
+Y2B,Esme Hasan,2019-11-01 00:00:00,F,Thai,BSB22066,Ayuthaya
+Y2B,Ikuka Ishii,17/7/2019,F,Japanese,BSB21058,Sukhothai
+Y2B,Manami Thongnum,2018-08-11 00:00:00,F,Thai,BSB21052,Sukhothai
+Y2B,Naotaro Endo,2019-07-03 00:00:00,M,Japanese,BSB24047,Sukhothai
+Y2B,Nathaniel  Layno  Rodriguez ,25/12/2018,M,Italian,BSB23101,Ayuthaya
+Y2B,Raphani Dawar,15/7/2019,F,Thai,BSB21037,Ayuthaya
+Y2B,Riri Kumagai,2018-09-11 00:00:00,F,Japanese,BSB24031,Sukhothai
+Y2B,So Yamada,2019-10-06 00:00:00,F,Japanese,BSB24026,Ayuthaya
+Y2B,Upe Kvedaraite,2019-01-09 00:00:00,F,Lithuanian,BSB23057,Sukhothai
+Y2B,Kris Chaiareekij,2019-11-09 00:00:00,M,Thai,BSB2373,Sukhothai
+Y2B,Siyi Bu,30/01/2019,M,Chinese,BSB2377,Sukhothai
+Y2B,Sae Muramatsu,22/08/2018,M,Japanese,BSB2385,Ayuthaya
+Y2B,,,,,,
+Y2B,,,,,,
+Y2B,,,,,,
+Y2B,,,,,,
+Y2B,,,,,,
+Y2B,,,,,,
+Y2B,,,,,,
+Y2TBC,Ajaa  Naima Christina  Hossfeld,16/12/2019,F,German,BSB2414,Ayuthaya
+Y2TBC,Amai Kweli Lisa Hossfeld,16/12/2019,F,German,BSB2413,Ayuthaya
+,,,,,,
+Y3A,Elan Jai Mangal,16/8/2018,M,Thai,BSB20003,Ayuthaya
+Y3A,Faaiz Ashraf Mullaji,20/3/2018,M,Indian,BSB20030,Sukhothai
+Y3A,Janosch Fabri,2018-06-02 00:00:00,M,German,BSB22050,Ayuthaya
+Y3A,Nakin Thipatima,2018-09-07 00:00:00,M,Thai,BSB23023,Sukhothai
+Y3A,Nira Thipatima,2018-09-07 00:00:00,F,Thai,BSB23024,Ayuthaya
+Y3A,Pippa  Potisoontorn ,2017-12-05 00:00:00,F,Thai,BSB23016,Sukhothai
+Y3A,Rikka Yamauchi,2018-02-03 00:00:00,F,Japanese,BSB24033,Ayuthaya
+Y3A,Rino Tomizawa,26/02/2018,F,Japanese,BSB24041,Sukhothai
+Y3A,Samarth Sai Nama,30/05/2018,M,Indian,BSB24003,Ayuthaya
+Y3A,Sana Yamaguchi,24/04/2018,F,Japanese,BSB24025,Sukhothai
+Y3A,Thoon Su Sandha Mon,18/1/2019,F,Myanmar,BSB22060,Ayuthaya
+Y3A,Yusei Kawase,2018-01-04 00:00:00,M,Japanese,BSB23106,Sukhothai
+Y3A,Zoey Surasarang Melson,30/10/2017,F,Thai,BSB22022,Ayuthaya
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+Y3A,,,,,,
+,,,,,,
+Y3B,Arjun  Swapnil Patil,2018-01-06 00:00:00,M,Indian,BSB24060,Ayuthaya
+Y3B,Erina Suzuki,20/01/2018,F,Japanese,BSB23026,Ayuthaya
+Y3B,Joshua  Ittipon  Atherton,2017-04-05 00:00:00,M,British,BSB24056,Sukhothai
+Y3B,Katsunari Sakurai,2017-05-12 00:00:00,M,Japanese,BSB22065,Ayuthaya
+Y3B,Kenzo Och,25/02/2018,M,Swiss,BSB24067,Sukhothai
+Y3B,Mika Sakai,2018-06-08 00:00:00,F,Japanese,BSB23099,Sukhothai
+Y3B,Shio Yamauchi,30/05/2018,M,Japanese,BSB23109,Ayuthaya
+Y3B,Sui Yamamoto,29/03/2018,F,Japanese,BSB23112,Ayuthaya
+Y3B,Theodore  Geoffery Hatta Parsons,2018-06-11 00:00:00,M,British,BSB23014,Sukhothai
+Y3B,Tom Doodai,21/02/2018,F,Israeli,BSB24020,Sukhothai
+Y3B,Klara Jasmin Atharizq ,23/07/2018,F,Indonesian,BSB2199,Sukhothai
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+Y3B,,,,,,
+,,,,,,
+Y3C,Ahmed  LAIDHAN   Raslaan Shiyam,2018-06-11 00:00:00,M,Maldivian,BSB24058,Ayuthaya
+Y3C,Booker Lennox McClellan,15/12/2017,M,Canadian,BSB20047,Sukhothai
+Y3C,Elena Patrick,2018-03-05 00:00:00,F,Indian,BSB22017,Ayuthaya
+Y3C,Gaurish Sharma,26/10/2017,M,Indian,BSB24030,Ayuthaya
+Y3C,Mia Nakazawa,2018-02-02 00:00:00,F,Japanese,BSB01181,Sukhothai
+Y3C,Narlan Ruadrew,19/07/2017,F,Thai,BSB24062,Ayuthaya
+Y3C,Rui Miyazaki,29/09/2018,M,Japanese,BSB23105,Ayuthaya
+Y3C,Ryoma Kubo,21/11/2017,M,Japanese,BSB22061,Sukhothai
+Y3C,Sana Matsuzaka,28/9/2018,F,Japanese,BSB21042,Sukhothai
+Y3C,Viraaj Prabhakar,2018-07-01 00:00:00,M,Thai,BSB24043,Sukhothai
+Y3C,Zhi Heng He,14/9/2017,M,Chinese,BSB22056,Sukhothai
+Y3C,Khamkhouanh Vongphachanh,2016-10-10 00:00:00,F,Laos,BSB2382,Ayuthaya
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+Y3C,,,,,,
+,,,,,,
+Y4A,Avi Krish Mangal,27/2/2017,M,Thai,BSB20002,Ayuthaya
+Y4A,Chise Kitami,2016-02-11 00:00:00,F,Japanese,BSB21046,Ayuthaya
+Y4A,Guy Horatio Shao-Wei Leaver,22/1/2017,M,Singaporean,BSB21026,Sukhothai
+Y4A,Ibragim Kaiyrbek,2017-08-08 00:00:00,M,Kazakhs,BSB24034,Ayuthaya
+Y4A,Kalvinphat Phaosawasdi,2017-05-02 00:00:00,M,Thai,BSB24075,Sukhothai
+Y4A,Kanitha Arisen Arumugam,2017-09-11 00:00:00,F,Indian,BSB20012,Sukhothai
+Y4A,Lea  Davis Staley ,24/03/2017,F,American,BSB23102,Ayuthaya
+Y4A,Lucas Hofstetter,27/6/2017,M,German,BSB21004,Ayuthaya
+Y4A,Maison  James Richard Cruz Marchant,2017-10-04 00:00:00,M,British,BSB23053,Sukhothai
+Y4A,Marquess Naveesathien,2016-12-12 00:00:00,M,Thai,BSB23020,Ayuthaya
+Y4A,Minami Hara,29/06/2017,F,Japanese,BSB24074,Sukhothai
+Y4A,Rin Hamada,2017-05-02 00:00:00,F,Japanese,BSB23017,Ayuthaya
+Y4A,Samar  Ali Shaikh,28/3/2017,M,Indian,BSB22010,Sukhothai
+Y4A,Sofi Mosina,2016-02-10 00:00:00,F,Russian,BSB23107,Ayuthaya
+Y4A,Suzuna Ozawa,23/09/2016,F,Japanese,BSB23091,Sukhothai
+Y4A,Veer Singh Pundir,2017-08-06 00:00:00,M,Indian,BSB23070,Ayuthaya
+Y4A,Sainaara Argunova,22/06/2017,F,Russian,BSB2370,Sukhothai
+Y4A,,,,,,
+Y4A,,,,,,
+Y4A,,,,,,
+Y4A,,,,,,
+Y4A,,,,,,
+,,,,,,
+Y4B,Aaryahi Shankar,2017-06-06 00:00:00,F,Australian,BSB23050,Ayuthaya
+Y4B,Amane Enya,14/02/2017,M,Japanese,BSB23098,Ayuthaya
+Y4B,Angelica Venturini,13/12/2016,F,Italian,BSB23046,Sukhothai
+Y4B,Avaneesh Prasad,22/4/2017,M,Indian,BSB22006,Sukhothai
+Y4B,Gregory Moreschi,2017-04-04 00:00:00,M,Italian,BSB23056,Ayuthaya
+Y4B,Iana Danilova,20/11/2016,F,Russian,BSB23001,Ayuthaya
+Y4B,Kazi Rusho Abdullah Rahman,15/7/2016,M,Bangladesh,BSB01256,Ayuthaya
+Y4B,Leon Shishido,29/07/2017,M,Japanese,BSB24008,Sukhothai
+Y4B,Nanao Saito,19/7/2017,F,Japanese,BSB21001,Sukhothai
+Y4B,Rey Rafael Ben Abu,2017-11-09 00:00:00,M,Israeli,BSB20029,Ayuthaya
+Y4B,Shakrit Smith,19/11/2016,M,Thai,BSB21033,Sukhothai
+Y4B,Taiki Iwasaki,2016-04-08 00:00:00,M,Japanese,BSB23018,Sukhothai
+Y4B,Tomoharu Ishii,17/9/2016,M,Japanese,BSB21056,Sukhothai
+Y4B,Xicheng Wu,21/03/2016,M,Chinese,BSB23035,Ayuthaya
+Y4B,TaeWha Kim,26/10/2017,M,South Korean,BSB2397,Sukhothai
+Y4B,,,,,,
+Y4B,,,,,,
+Y4B,,,,,,
+Y4B,,,,,,
+Y4B,,,,,,
+Y4B,,,,,,
+Y4B,,,,,,
+,,,,,,
+Y5,Ajai Dawar,2016-03-09 00:00:00,M,Thai,BSB01179,Ayuthaya
+Y5,Azah Dawar,2016-03-09 00:00:00,F,Thai,BSB01201,Ayuthaya
+Y5,Dominic Chalieowai McClellan,23/2/2016,M,Thai,BSB21014,Sukhothai
+Y5,Erina Takahashi ,2016-03-08 00:00:00,F,Japanese,BSB23118,Sukhothai
+Y5,Inayah Monjer,25/8/2016,F,Bangladesh,BSB21038,Sukhothai
+Y5,Mio Fabri,2015-10-12 00:00:00,M,German,BSB22049,Ayuthaya
+Y5,REHAN AS  SAMI,31/05/2015,M,Bangladeshi,BSB24073,Sukhothai
+Y5,Ritsuko Adachi,2016-11-04 00:00:00,F,Japanese,BSB24036,Sukhothai
+Y5,Royal Shilat Ben Abu,2016-10-04 00:00:00,F,Israeli,BSB20028,Ayuthaya
+Y5,Ruby Linlat,19/12/2016,F,Myanmar,BSB23066,Ayuthaya
+Y5,Saule Kvedaraite,2016-08-05 00:00:00,F,Lithuanian,BSB23058,Sukhothai
+Y5,Shanvi Acharya,2016-10-02 00:00:00,F,Indian,BSB21059,Sukhothai
+Y5,Veronika Abramov,2016-05-05 00:00:00,F,Russian,BSB23072,Ayuthaya
+Y5,Viaan Barua,30/10/2016,M,Indian,BSB22003,Sukhothai
+Y5,Yuki Matsuzaka,18/12/2015,M,Japanese,BSB21041,Ayuthaya
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+Y5,,,,,,
+,,,,,,
+Y6,Ahasha Pandey,2015-05-01 00:00:00,F,Indian,BSB23068,Ayuthaya
+Y6,Angelica May Xiao-Wei Leaver,2015-05-05 00:00:00,F,Singaporean,BSB21025,Sukhothai
+Y6,Daniil Vladimirovich Popovidchenko,23/01/2015,M,Russian,BSB23047,Ayuthaya
+Y6,Dinuli Pehansa Dewmanthie Adikari Mudiyanselage,21/6/2015,F,Sri Lankan,BSB21047,Ayuthaya
+Y6,Emmy Safira Duangthawee,2015-12-07 00:00:00,F,American,BSB24042,Sukhothai
+Y6,Fora Dora,24/2/2015,M,Turkish,BSB01166,Sukhothai
+Y6,Iso Ikromi,18/11/2014,M,Russian,BSB23079,Ayuthaya
+Y6,Jacob Hofstetter,25/2/2015,M,German,BSB21003,Ayuthaya
+Y6,Mana Tomizawa,2015-07-05 00:00:00,F,Japanese,BSB24040,Ayuthaya
+Y6,May Doodai,2015-05-07 00:00:00,F,Israeli,BSB24019,Sukhothai
+Y6,Mia Claire Wilson,2014-10-12 00:00:00,F,British,BSB24006,Ayuthaya
+Y6,Paarth Madan,18/12/2014,M,Indian,BSB01178,Sukhothai
+Y6,Shehzad Ihsan Khan,14/5/2015,M,Bangladeshi,BSB22027,Sukhothai
+Y6,Zie Ning Zita Sim,28/09/2014,F,Singaporean,BSB01248,Ayuthaya
+Y6,Zoe Pascual Arce,2015-02-05 00:00:00,F,Philippines,BSB23039,Sukhothai
+Y6,Kenzo Taqi Atharizq,2015-01-09 00:00:00,M,Indonesia,BSB20040,Ayuthaya
+Y6,Shoma Takahashi ,31/07/2014,M,Japanese,BSB23025,Sukhothai
+Y6,,,,,,
+Y6,,,,,,
+Y6,,,,,,
+Y6,,,,,,
+Y6,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,Graduated 2025 (27/6/25),,,,,
