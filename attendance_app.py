@@ -1,4 +1,5 @@
 
+from teacher_entry import teacher_attendance_entry
 import streamlit as st
 import pandas as pd
 
@@ -11,72 +12,38 @@ def load_data():
     teachers = pd.read_csv("data/teachers.csv")
     return students, attendance, teachers
 
-students, attendance, teachers = load_data()
+def preprocess_data(students, attendance):
+    # Merge student info into attendance
+    merged = pd.merge(attendance, students, on="student_id", how="left", suffixes=("_att", "_stu"))
 
-st.title("📊 BSB Attendance Dashboard")
+    # Fill class from student data if attendance class is unknown
+    if "class_att" in merged.columns and "class_stu" in merged.columns:
+        merged["class"] = merged["class_att"].where(merged["class_att"] != "Unknown", merged["class_stu"])
+    elif "class" not in merged.columns:
+        st.warning("Merged data missing 'class' info. Analysis may be limited.")
 
-view_mode = st.radio("Select View Mode", ["Teacher", "Admin"], horizontal=True)
+    return merged
 
-if view_mode == "Teacher":
-    teacher_names = teachers["name"].tolist()
-    selected_teacher = st.selectbox("Who are you?", teacher_names)
-    assigned_class = teachers.loc[teachers["name"] == selected_teacher, "assigned_class"].values[0]
+def main():
+    students, attendance, teachers = load_data()
+    merged = preprocess_data(students, attendance)
 
-    st.markdown(f"👨‍🏫 Viewing class: **{assigned_class}**")
-    students = students[students["class"] == assigned_class]
-    if "class" in attendance.columns:
-        attendance = attendance[attendance["class"] == assigned_class]
+    view_mode = st.radio("Select View Mode", ["Teacher", "Admin"], horizontal=True)
+
+    if view_mode == "Teacher":
+        teacher_attendance_entry(students, attendance, teachers)
     else:
-        st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
-        attendance = attendance.head(0)
+        st.header("📊 Attendance Summary")
+        st.metric("Total Students", len(students))
+        st.metric("Attendance Rate", f"{100 * merged['status'].isin(['P']).mean():.1f}%" if not merged.empty else "0.0%")
+        st.metric("Girls %", f"{100 * (students['gender'] == 'F').mean():.1f}%" if not students.empty else "0.0%")
 
-else:
-    classes = sorted(students["class"].dropna().unique())
-    selected_class = st.selectbox("Select your class", classes)
-    students = students[students["class"] == selected_class]
-    if "class" in attendance.columns:
-        attendance = attendance[attendance["class"] == selected_class]
+        try:
+            absences_by_class = merged[merged["status"].isin(["E", "U"])].groupby("class").size()
+            st.subheader("🚫 Top Absentees by Class")
+            st.bar_chart(absences_by_class)
+        except KeyError as e:
+            st.error(f"Missing expected column during analysis: {e}")
 
-terms = sorted(attendance["term"].dropna().unique()) if "term" in attendance.columns else []
-selected_term = st.selectbox("Select Term", terms) if terms else "All"
-if "term" in attendance.columns:
-    attendance = attendance[attendance["term"] == selected_term]
-
-merged = pd.merge(attendance, students, on="student_id", how="left")
-
-st.markdown("### 🔍 Attendance Summary")
-col1, col2, col3, col4 = st.columns(4)
-with col1:
-    st.metric("Total Students", students.shape[0])
-with col2:
-    total_attendance = attendance.shape[0]
-    present_count = attendance[attendance["status"].isin(["P", "T"])].shape[0]
-    percent_present = (present_count / total_attendance * 100) if total_attendance else 0
-    st.metric("Attendance Rate", "{:.1f}%".format(percent_present))
-with col3:
-    gender_ratio = students["gender"].value_counts(normalize=True) * 100
-    st.metric("Girls %", "{:.1f}%".format(gender_ratio.get("F", 0)))
-with col4:
-    absences_by_class = merged[merged["status"].isin(["E", "U"])].groupby("class").size()
-    most_absent_class = absences_by_class.idxmax() if not absences_by_class.empty else "N/A"
-    st.metric("Most Absent Class", most_absent_class)
-
-st.markdown("### 🚨 Top Absentees")
-absent_count = merged[merged["status"].isin(["E", "U"])].groupby(["student_id", "name", "class"]).size().reset_index(name="absences")
-top_absentees = absent_count.sort_values(by="absences", ascending=False).head(5)
-st.dataframe(top_absentees)
-
-st.markdown("### 🏠 House Overview")
-house_stats = merged[merged["status"].isin(["P", "T", "E", "U"])]
-house_summary = house_stats.groupby("house")["status"].value_counts().unstack().fillna(0)
-house_summary["Total Records"] = house_summary.sum(axis=1)
-house_summary["% Present"] = (
-    house_summary.get("P", 0) + house_summary.get("T", 0)
-) / house_summary["Total Records"] * 100
-st.dataframe(house_summary[["Total Records", "% Present"]].sort_values(by="% Present", ascending=False))
-
-st.markdown("### 🧾 Student List")
-st.dataframe(students)
-
-st.markdown("### 🕓 Attendance Records")
-st.dataframe(attendance)
+if __name__ == "__main__":
+    main()
