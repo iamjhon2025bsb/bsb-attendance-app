@@ -8,24 +8,34 @@ st.set_page_config(page_title="BSB Attendance Dashboard", layout="wide")
 def load_data():
     students = pd.read_csv("data/students.csv")
     attendance = pd.read_csv("data/attendance.csv", parse_dates=['date'])
-    return students, attendance
+    teachers = pd.read_csv("data/teachers.csv")
+    return students, attendance, teachers
 
-students, attendance = load_data()
+students, attendance, teachers = load_data()
 
 st.title("📊 BSB Attendance Dashboard")
 
 view_mode = st.radio("Select View Mode", ["Teacher", "Admin"], horizontal=True)
 
-classes = sorted(students["class"].dropna().unique())
-selected_class = None
 if view_mode == "Teacher":
+    teacher_names = teachers["name"].tolist()
+    selected_teacher = st.selectbox("Who are you?", teacher_names)
+    assigned_class = teachers.loc[teachers["name"] == selected_teacher, "assigned_class"].values[0]
+
+    st.markdown(f"👨‍🏫 Viewing class: **{assigned_class}**")
+    students = students[students["class"] == assigned_class]
+    if "class" in attendance.columns:
+        attendance = attendance[attendance["class"] == assigned_class]
+    else:
+        st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
+        attendance = attendance.head(0)
+
+else:
+    classes = sorted(students["class"].dropna().unique())
     selected_class = st.selectbox("Select your class", classes)
     students = students[students["class"] == selected_class]
     if "class" in attendance.columns:
         attendance = attendance[attendance["class"] == selected_class]
-    else:
-        st.warning("⚠️ Attendance file does not include a 'class' column. Cannot filter by class.")
-        attendance = attendance.head(0)
 
 terms = sorted(attendance["term"].dropna().unique()) if "term" in attendance.columns else []
 selected_term = st.selectbox("Select Term", terms) if terms else "All"
