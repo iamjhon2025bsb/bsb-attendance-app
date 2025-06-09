@@ -5,7 +5,7 @@ import pandas as pd
 # Load the data
 @st.cache_data
 def load_data():
-    students = pd.read_csv("data/students_master.csv")
+    students = pd.read_csv("data/students.csv")
     attendance = pd.read_csv("data/attendance.csv")
     teachers = pd.read_csv("data/teachers.csv")
     return students, attendance, teachers
